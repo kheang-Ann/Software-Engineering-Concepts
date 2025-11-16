@@ -1,0 +1,124 @@
+/*
+ * Student Management System - Dark Theme
+ */
+
+.root {
+    -primary-color: #0d6efd;
+    -primary-hover: #0a58ca;
+    -secondary-color: #6c757d;
+    -secondary-hover: #5c636a;
+    -success-color: #198754;
+    -danger-color: #dc3545;
+    -info-color: #0dcaf0;
+    -light-color: #f8f9fa;
+    -dark-color: #212529;
+
+    -fx-background-color: #212529;
+    -card-background: #2c3034;
+    -border-color: #495057;
+}
+
+.title-label {
+    -fx-text-fill: -light-color;
+}
+
+.stat-number {
+    -fx-text-fill: -primary-color;
+}
+
+.stat-label {
+    -fx-text-fill: -secondary-color;
+}
+
+.button {
+    -fx-text-fill: white;
+}
+
+.primary-button {
+    -fx-background-color: -primary-color;
+    -fx-border-color: -primary-color;
+}
+
+.secondary-button {
+    -fx-background-color: -secondary-color;
+    -fx-border-color: -secondary-color;
+}
+
+.danger-button {
+    -fx-background-color: -danger-color;
+    -fx-border-color: -danger-color;
+}
+
+.student-table {
+    -fx-background-color: -card-background;
+    -fx-border-color: -border-color;
+}
+
+.student-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #3a3f44, #343a40);
+    -fx-border-color: -border-color;
+}
+
+.student-table .column-header {
+    -fx-text-fill: -light-color;
+}
+
+.student-table .table-row-cell {
+    -fx-background-color: -card-background;
+    -fx-border-color: #454b52;
+    -fx-text-fill: -light-color;
+}
+
+.student-table .table-row-cell:selected {
+    -fx-background-color: rgba(13, 110, 253, 0.2);
+    -fx-border-color: -primary-color;
+    -fx-text-fill: -light-color;
+}
+
+.student-table .table-row-cell:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+.student-table .table-row-cell:selected:hover {
+    -fx-background-color: rgba(13, 110, 253, 0.25);
+}
+
+.student-table .table-cell {
+    -fx-text-fill: -light-color;
+}
+
+.form-field, .combo-box, .date-picker, .spinner {
+    -fx-background-color: #343a40;
+    -fx-border-color: -border-color;
+    -fx-text-fill: -light-color;
+}
+
+.form-field .text-input {
+    -fx-text-fill: -light-color;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #343a40;
+    -fx-text-fill: -light-color;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #495057;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: -primary-color;
+}
+
+.status-bar {
+    -fx-background-color: -dark-color;
+    -fx-border-color: -border-color;
+}
+
+.status-label, .timestamp-label, .info-label, .selected-student-label {
+    -fx-text-fill: -light-color;
+}
+
+.label {
+    -fx-text-fill: -light-color;
+}
