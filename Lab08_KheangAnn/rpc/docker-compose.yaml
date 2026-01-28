@@ -1,0 +1,39 @@
+services:
+  rabbitmq:
+    image: rabbitmq:4.2-management
+    networks:
+      - rabbit-net
+    volumes:
+      - rabbit-data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+
+  rpc-server:
+    build: ./server
+    restart: on-failure
+    depends_on:
+      - rabbitmq
+    networks:
+      - rabbit-net
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+
+  rpc-client:
+    build: ./client
+    depends_on:
+      - rabbitmq
+    networks:
+      - rabbit-net
+    environment:
+      - RABBITMQ_HOST=rabbitmq
+
+networks:
+  rabbit-net:
+    driver: bridge
+
+volumes:
+  rabbit-data:
